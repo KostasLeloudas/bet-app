@@ -9,6 +9,7 @@ export default tseslint.config(
   eslint.configs.recommended,
   ...tseslint.configs.recommended,
   {
+    extends: 'react-app',
     languageOptions: { globals: globals.browser },
     files: ['src/**/*.{ts,tsx}'],
     plugins: {
