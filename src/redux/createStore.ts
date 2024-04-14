@@ -5,14 +5,14 @@ import * as productEpics from './ducks/products/epics';
 
 const epicMiddleware = createEpicMiddleware();
 
-const epics: (typeof productEpics.handleFetchProducts)[] = [productEpics.handleFetchProducts];
+const epics: ( typeof productEpics.handleFetchProducts )[] = [productEpics.handleFetchProducts];
 
-export const store = configureStore({
+export const store = configureStore( {
   reducer: rootReducer,
   middleware: [epicMiddleware]
-});
+} );
 
-export const registerEpics = () => epicMiddleware.run(combineEpics(...epics));
+export const registerEpics = () => epicMiddleware.run( combineEpics( ...epics ) );
 
 registerEpics();
 

@@ -5,7 +5,7 @@ const initialState: IProductsSlice = {
   products: [],
 };
 
-export const productsSlice = createSlice({
+export const productsSlice = createSlice( {
   name: "products",
   initialState,
   reducers: {
@@ -21,7 +21,7 @@ export const productsSlice = createSlice({
      * @method setProducts
      * @category Actions
      */
-    setProducts: (state, action: PayloadAction<IProduct[]>) => {
+    setProducts: ( state, action: PayloadAction<IProduct[]> ) => {
       state.products = action.payload;
     },
 
@@ -30,7 +30,7 @@ export const productsSlice = createSlice({
      * @method addProducts
      * @category Actions
      */
-    addProducts: (state, action: PayloadAction<IProduct[]>) => {
+    addProducts: ( state, action: PayloadAction<IProduct[]> ) => {
       state.products = [...state.products, ...action.payload];
     },
 
@@ -39,7 +39,7 @@ export const productsSlice = createSlice({
      * @method clearBets
      * @category Actions
      */
-    clearProducts: (state) => {
+    clearProducts: ( state ) => {
       state.products = [];
     },
 
@@ -48,11 +48,11 @@ export const productsSlice = createSlice({
      * @method fetchProductsFailure
      * @category Actions
      */
-    fetchProductsFailure: (_, action) => {
-      console.error("foobar", action.payload);
+    fetchProductsFailure: ( _, action ) => {
+      console.error( "foobar", action.payload );
     },
   },
-});
+} );
 
 export const {
   fetchProducts,
