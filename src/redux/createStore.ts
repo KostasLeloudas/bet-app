@@ -1,15 +1,15 @@
-import { configureStore } from "@reduxjs/toolkit";
-import rootReducer from "./rootReducer";
-import { combineEpics, createEpicMiddleware } from "redux-observable";
-import * as productEpics from "./ducks/products/epics";
+import { configureStore } from '@reduxjs/toolkit';
+import rootReducer from './rootReducer';
+import { combineEpics, createEpicMiddleware } from 'redux-observable';
+import * as productEpics from './ducks/products/epics';
 
 const epicMiddleware = createEpicMiddleware();
 
-const epics: any[] = [productEpics.handleFetchProducts];
+const epics: (typeof productEpics.handleFetchProducts)[] = [productEpics.handleFetchProducts];
 
 export const store = configureStore({
   reducer: rootReducer,
-  middleware: [epicMiddleware],
+  middleware: [epicMiddleware]
 });
 
 export const registerEpics = () => epicMiddleware.run(combineEpics(...epics));

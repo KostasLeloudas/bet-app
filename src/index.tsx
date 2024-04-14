@@ -8,7 +8,7 @@ import { store } from "./redux/createStore";
 import "./index.scss";
 
 const root = ReactDOM.createRoot(
-  document.getElementById("root") as HTMLElement
+  document.getElementById( "root" ) as HTMLElement
 );
 
 root.render(

@@ -1,20 +1,18 @@
-import React from "react";
-import { useSelector } from "react-redux";
-import { useParams } from "react-router-dom";
+import React from 'react';
+import { useSelector } from 'react-redux';
+import { useParams } from 'react-router-dom';
 
-import { selectProductById } from "../../redux/ducks/products/selectors";
-import { RouteParams } from "./typings";
-import { ImageCarousel } from "../../components/Product/ImageCarousel/ImageCarousel";
-import { TAppState } from "../../redux/typings";
+import { selectProductById } from '../../redux/ducks/products/selectors';
+import { RouteParams } from './typings';
+import { ImageCarousel } from '../../components/Product/ImageCarousel/ImageCarousel';
+import { TAppState } from '../../redux/typings';
+import { ProductContent } from '../../components/Product/ProductContent/ProductContent';
 
-import "./ProductPage.scss";
-import { ProductContent } from "../../components/Product/ProductContent/ProductContent";
+import './ProductPage.scss';
 
 export const ProductPage = () => {
   const { productId } = useParams<RouteParams>();
-  const selectedProduct = useSelector((state: TAppState) =>
-    selectProductById(state, +productId)
-  );
+  const selectedProduct = useSelector( ( state: TAppState ) => selectProductById( state, +productId ) );
 
   return (
     <>

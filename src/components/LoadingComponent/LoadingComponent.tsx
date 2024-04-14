@@ -1,5 +1,3 @@
-import "./LoadingComponent.scss";
+import './LoadingComponent.scss';
 
-export const LoadingComponent = () => (
-  <div className="loading-component">Loading...</div>
-);
+export const LoadingComponent = () => <div className="loading-component">Loading...</div>;

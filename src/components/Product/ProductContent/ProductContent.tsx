@@ -1,20 +1,14 @@
-import React from "react";
-import { useSelector } from "react-redux";
-import { useParams } from "react-router-dom";
-import Typography from "@mui/material/Typography";
-// import { selectProductById } from "../../redux/ducks/products/selectors";
-// import { RouteParams } from "./typings";
-// import { ImageCarousel } from "../../components/Product/ImageCarousel/ImageCarousel";
-// import { TAppState } from "../../redux/typings";
-import { IProduct } from "../../../redux/ducks/products/typings";
+import React from 'react';
+import Typography from '@mui/material/Typography';
+import { IProduct } from '../../../redux/ducks/products/typings';
 
-import "./ProductContent.scss";
+import './ProductContent.scss';
 
 interface IProductContentProps {
   product: Partial<IProduct>;
 }
 
-export const ProductContent = ({ product }: IProductContentProps) => {
+export const ProductContent = ( { product }: IProductContentProps ) => {
   return (
     <div className="product-content">
       <Typography gutterBottom variant="h5" sx={{ flexGrow: 2 }}>
