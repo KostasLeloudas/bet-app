@@ -1,11 +1,12 @@
 import { configureStore } from '@reduxjs/toolkit';
 import rootReducer from './rootReducer';
 import { combineEpics, createEpicMiddleware } from 'redux-observable';
-import * as productEpics from './ducks/products/epics';
+import * as exampleEpics from './ducks/example/epics';
 
 const epicMiddleware = createEpicMiddleware();
 
-const epics: ( typeof productEpics.handleFetchProducts )[] = [productEpics.handleFetchProducts];
+/** Note: Get rid of this any */
+const epics: any[] = [exampleEpics.handleFetchExamples];
 
 export const store = configureStore( {
   reducer: rootReducer,

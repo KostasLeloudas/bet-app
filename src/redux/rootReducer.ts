@@ -1,8 +1,8 @@
 import { combineReducers } from "redux";
-import { products } from "./ducks/products/slice";
+import { example } from "./ducks/example/slice";
 
 const rootReducer = combineReducers( {
-  products,
+  example,
 } );
 
 export default rootReducer;

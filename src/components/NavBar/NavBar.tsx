@@ -10,16 +10,16 @@ import MenuIcon from '@mui/icons-material/Menu';
 
 export default function NavBar() {
   return (
-    <Box sx={{ flexGrow: 1, mb: 2 }}>
+    <Box sx={{ flexGrow: 1, mb: 2 }} data-testid='navbar-container-box'>
       <AppBar position="static">
         <Toolbar>
           <IconButton size="small" edge="start" color="inherit" aria-label="menu" sx={{ mr: 2 }}>
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            <Link to="/" style={{ textDecoration: 'none' }}>
+            {/* <Link to="/" style={{ textDecoration: 'none' }}>
               Home
-            </Link>
+            </Link> */}
           </Typography>
           <Button color="inherit">Login</Button>
         </Toolbar>
