@@ -1,27 +1,23 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { Layout } from '../Layout/Layout';
-import NavBar from '../../components/NavBar/NavBar';
+import React, { useEffect } from 'react';
+import { HeroGrid } from '../ContainerGrid/HeroGrid';
+import { SearchBar } from '../../components/SearchBar/SearchBar';
+import { useDispatch } from 'react-redux';
+import characters from '../../constants/mock-data.json';
 import './App.scss';
-
-// const LazyProductPage = React.lazy( () =>
-//   import( '../ProductPage/ProductPage' ).then( ( module ) => ( {
-//     default: module.ProductPage
-//   } ) )
-// );
+import { setCharacters } from '../../redux/ducks/character/slice';
 
 function App() {
+  // const dispatch = useDispatch();
+
+  // useEffect( () => {
+  //   dispatch( setCharacters(characters?.characters) )
+  // }, [] );
+
   return (
-    <Router>
       <div className="App">
-        <Layout>
-          {/* <NavBar /> */}
-          <Switch>
-            {/* <Route path="/product/:productId" exact component={LazyProductPage} /> */}
-          </Switch>
-        </Layout>
+        <SearchBar />
+        <HeroGrid />
       </div>
-    </Router>
   );
 }
 

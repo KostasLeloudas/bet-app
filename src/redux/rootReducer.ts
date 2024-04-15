@@ -1,8 +1,8 @@
 import { combineReducers } from "redux";
-import { example } from "./ducks/example/slice";
+import { characters } from "./ducks/character/slice";
 
 const rootReducer = combineReducers( {
-  example,
+  characters,
 } );
 
 export default rootReducer;
